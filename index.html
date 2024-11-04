@@ -28,25 +28,10 @@
             </div>
         </section>
     </main>
-    <script>
-          const colorDeFondo = prompt(
-        "Hola joven, escribe un color en ingles"
-      );
 
-      console.log(colorDeFondo);
-      
-      document.body.style.backgroundColor = colorDeFondo;
-    
-      const peso = prompt("Ingresa tu peso en la tierra");
-      
-      const resultado = (Number(peso) / 9.81) * 1.622;
-     
-      alert("Tu peso en la luna es " + resultado + " Kg.");
+    <!-- Botón "Quiero interactuar" centrado en la parte inferior -->
+    <a href="./interactivo.html" class="btn-main">Quiero interactuar</a>
 
-      const pesoMarte = (Number(peso) / 9.81) * 3.721;
-
-      alert("Tu peso en Marte es " + pesoMarte.toFixed(2) + " Kg.");
-      
-    </script>
+    <script src="./app.js"></script>
 </body>
 </html>

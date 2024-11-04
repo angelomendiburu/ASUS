@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -28,10 +29,14 @@ header {
     color: white;
     text-decoration: none;
     margin-left: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Transición para agrandamiento */
 }
 
 .navbar nav a:hover {
-    text-decoration: underline;
+    background-color: #444;
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
 }
 
 main {
@@ -45,65 +50,60 @@ main {
     padding: 20px;
 }
 
-.promo-container {
-    max-width: 600px;
-    margin: auto;
-    position: relative;
+/* Estilo para el contenedor de botones */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Coloca los botones en vertical */
+    align-items: center; /* Centra los botones horizontalmente */
+    position: fixed; /* Mantiene el contenedor en la misma posición */
+    bottom: 20px; /* Espacio desde el fondo */
+    left: 50%; /* Posiciona en el centro horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centrar correctamente */
 }
 
-.promo img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.promo-text {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    color: white;
-    max-width: 80%;
-}
-
-.promo-text h2 {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.promo-text p {
+/* Estilo para todos los botones */
+button, .btn-main {
+    padding: 12px 24px;
     font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* Suavidad en las transiciones */
+    margin: 5px 0; /* Espacio entre botones */
 }
 
-.promo-text strong {
-    color: #ffdd00;
+button:hover, .btn-main:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Agrandamiento al pasar el cursor */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
 }
 
-/* Media Query for Responsiveness */
-@media (max-width: 768px) {
-    .promo-container {
-        max-width: 90%;
-    }
-
-    .promo-text h2 {
-        font-size: 20px;
-    }
-
-    .promo-text p {
-        font-size: 14px;
-    }
+button:active, .btn-main:active {
+    background-color: #3e8e41;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1); /* Elimina el agrandamiento al hacer clic */
 }
 
-@media (max-width: 480px) {
-    .promo-text {
-        top: 10%;
-        left: 5%;
-    }
-
-    .promo-text h2 {
-        font-size: 18px;
-    }
-
-    .promo-text p {
-        font-size: 12px;
-    }
+#contenedorTablaMultiplicar {
+    margin-top: 20px;
+    color: black; /* Cambia el color del texto a negro */
+    text-align: left; /* Alinea el texto a la izquierda */
 }
+
+table {
+    width: 100%; /* Hacer la tabla más amplia si lo deseas */
+    border-collapse: collapse; /* Colapsar bordes */
+}
+
+th, td {
+    padding: 8px; /* Espaciado en celdas */
+    border: 1px solid #ccc; /* Bordes grises para las celdas */
+}
+
+th {
+    background-color: #f2f2f2; /* Co
